@@ -1,0 +1,51 @@
+.offer-banner {
+  background: linear-gradient(135deg, var(--accent) 0%, #b8943f 100%);
+  padding: 40px 0;
+}
+
+.offer-banner__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.offer-banner__label {
+  display: inline-block;
+  padding: 4px 14px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.offer-banner__text h3 {
+  font-size: 1.6rem;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.offer-banner__text p {
+  font-size: 0.92rem;
+  color: rgba(26, 26, 46, 0.7);
+}
+
+.offer-banner__cta .btn-accent {
+  background: var(--text-dark);
+  color: #fff;
+}
+
+.offer-banner__cta .btn-accent:hover {
+  background: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+  .offer-banner__content {
+    flex-direction: column;
+    text-align: center;
+  }
+}

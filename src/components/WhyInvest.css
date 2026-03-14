@@ -1,0 +1,67 @@
+.why-invest {
+  background: linear-gradient(135deg, #0e3a20 0%, #1a5632 40%, #1a3a4a 100%);
+  color: #fff;
+}
+
+.why-invest .section-title h2 {
+  color: #fff;
+}
+
+.why-invest .section-title p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.why-invest__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.reason-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.reason-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(200, 164, 86, 0.3);
+  transform: translateY(-2px);
+}
+
+.reason-card__icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(200, 164, 86, 0.15);
+  border-radius: 12px;
+}
+
+.reason-card__content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--accent);
+  font-family: 'Inter', sans-serif;
+}
+
+.reason-card__content p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .why-invest__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,133 @@
+.contact-form {
+  background: var(--bg-light);
+}
+
+.contact-form__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.contact-form__desc {
+  font-size: 1rem;
+  color: var(--text-medium);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.contact-form__details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-detail__icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(26, 86, 50, 0.08);
+  border-radius: 10px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.contact-detail div {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-detail__label {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact-detail__value {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.contact-form__form-wrapper {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px;
+  box-shadow: var(--shadow);
+}
+
+.contact-form__form h3 {
+  font-size: 1.3rem;
+  margin-bottom: 24px;
+  color: var(--text-dark);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-medium);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  transition: var(--transition);
+  background: var(--bg-light);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(26, 86, 50, 0.1);
+}
+
+.form-group input::placeholder {
+  color: var(--text-light);
+}
+
+.contact-form__submit {
+  width: 100%;
+  padding: 16px;
+  font-size: 1rem;
+}
+
+.contact-form__submit.submitted {
+  background: var(--primary);
+  color: #fff;
+}
+
+.contact-form__privacy {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+  .contact-form__content {
+    grid-template-columns: 1fr;
+  }
+}
