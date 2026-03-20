@@ -7,6 +7,7 @@ import LocationMap from './components/LocationMap';
 import Pricing from './components/Pricing';
 import BookingProcess from './components/BookingProcess';
 import WhyInvest from './components/WhyInvest';
+import NewsCoverage from './components/NewsCoverage';
 import About from './components/About';
 import FAQ from './components/FAQ';
 import ContactForm from './components/ContactForm';
@@ -24,6 +25,7 @@ function App() {
       <Pricing />
       <BookingProcess />
       <WhyInvest />
+      <NewsCoverage />
       <About />
       <FAQ />
       <OfferBanner />

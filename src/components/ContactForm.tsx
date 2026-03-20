@@ -47,7 +47,7 @@ const ContactForm: React.FC = () => {
                 </span>
                 <div>
                   <span className="contact-detail__label">Call Us</span>
-                  <span className="contact-detail__value">+91-XXXXX-XXXXX</span>
+                  <span className="contact-detail__value">+91-9241399171</span>
                 </div>
               </div>
               <div className="contact-detail">
@@ -59,7 +59,7 @@ const ContactForm: React.FC = () => {
                 </span>
                 <div>
                   <span className="contact-detail__label">Email</span>
-                  <span className="contact-detail__value">info@greenvista.com</span>
+                  <span className="contact-detail__value">hello@dwarikacity.in</span>
                 </div>
               </div>
               <div className="contact-detail">
@@ -71,7 +71,7 @@ const ContactForm: React.FC = () => {
                 </span>
                 <div>
                   <span className="contact-detail__label">Office Address</span>
-                  <span className="contact-detail__value">GreenVista Township, Main Road</span>
+                  <span className="contact-detail__value">Dwarika City, Bihta, Bihar</span>
                 </div>
               </div>
             </div>

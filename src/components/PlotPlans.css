@@ -2,75 +2,71 @@
   background: var(--bg-white);
 }
 
-.plot-plans__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+.plot-plans__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   margin-bottom: 40px;
 }
 
-.plot-card {
-  background: var(--bg-light);
-  border: 1px solid var(--border);
+.clickable-image {
+  max-width: 100%;
+  height: auto;
   border-radius: var(--radius);
-  padding: 30px 20px;
-  text-align: center;
-  transition: var(--transition);
   cursor: pointer;
-}
-
-.plot-card:hover {
-  transform: translateY(-4px);
+  transition: var(--transition);
   box-shadow: var(--shadow);
-  border-color: var(--primary);
+  object-fit: contain;
 }
 
-.plot-card__size {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: var(--primary);
-}
-
-.plot-card__unit {
-  font-size: 0.8rem;
-  color: var(--text-light);
-  margin-bottom: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.plot-card__label {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: 8px;
-}
-
-.plot-card__dimensions {
-  font-size: 0.85rem;
-  color: var(--text-medium);
-  margin-bottom: 8px;
-}
-
-.plot-card__ideal {
-  font-size: 0.8rem;
-  color: var(--accent);
-  font-weight: 500;
+.clickable-image:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
 }
 
 .plot-plans__cta {
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .plot-plans__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.image-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
 }
 
-@media (max-width: 400px) {
-  .plot-plans__grid {
-    grid-template-columns: 1fr;
-  }
+.image-modal-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+  cursor: default;
+}
+
+.image-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  transition: var(--transition);
+}
+
+.image-modal-close:hover {
+  color: var(--accent);
+  transform: scale(1.1);
 }

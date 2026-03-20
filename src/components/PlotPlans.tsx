@@ -1,15 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './PlotPlans.css';
 
-const plots = [
-  { size: '900', label: 'Compact', dimensions: '30 x 30 ft', ideal: 'Perfect starter plot' },
-  { size: '1200', label: 'Standard', dimensions: '30 x 40 ft', ideal: 'Most popular choice' },
-  { size: '1500', label: 'Premium', dimensions: '30 x 50 ft', ideal: 'Spacious family living' },
-  { size: '1800', label: 'Luxury', dimensions: '36 x 50 ft', ideal: 'Premium lifestyle' },
-  { size: '2400+', label: 'Estate', dimensions: '40 x 60 ft', ideal: 'Grand living space' },
-];
-
 const PlotPlans: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const imageSrc = '/landing-page/images/DwarikaCityPlottingPlan.png';
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+
   return (
     <section className="section plot-plans" id="plots">
       <div className="container">
@@ -18,21 +16,32 @@ const PlotPlans: React.FC = () => {
           <p>Choose from a range of plot sizes tailored to suit every need and budget</p>
           <div className="accent-line" />
         </div>
-        <div className="plot-plans__grid">
-          {plots.map((plot, index) => (
-            <div className="plot-card" key={index}>
-              <div className="plot-card__size">{plot.size}</div>
-              <div className="plot-card__unit">sq.ft</div>
-              <div className="plot-card__label">{plot.label}</div>
-              <div className="plot-card__dimensions">{plot.dimensions}</div>
-              <div className="plot-card__ideal">{plot.ideal}</div>
-            </div>
-          ))}
+        <div className="plot-plans__content">
+          <img 
+            src={imageSrc} 
+            alt="Dwarika City Plotting Plan" 
+            className="clickable-image"
+            onClick={handleOpenModal}
+          />
         </div>
         <div className="plot-plans__cta">
           <button className="btn-primary">Download Full Layout Plan</button>
         </div>
       </div>
+
+      {isModalOpen && (
+        <div className="image-modal-overlay" onClick={handleCloseModal}>
+          <button className="image-modal-close" onClick={handleCloseModal} aria-label="Close modal">
+            &times;
+          </button>
+          <img 
+            src={imageSrc} 
+            alt="Dwarika City Plotting Plan Zoomed" 
+            className="image-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 };

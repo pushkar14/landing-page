@@ -6,13 +6,13 @@ const Hero: React.FC = () => {
     <section className="hero" id="home">
       <div className="hero__overlay" />
       <div className="hero__content container">
-        <div className="hero__badge">Premium Residential Plots</div>
+        <div className="hero__badge">Dwarika City, <span className="badge-highlight">Bihta</span></div>
         <h1 className="hero__title">
-          Your Dream Home <br />
-          Starts With the <span>Perfect Plot</span>
+          "पटना के पास में <span className="title-highlight">Property Investment</span> का<br />
+          अगला Hotspot <span className="title-highlight">Bihta</span>"
         </h1>
         <p className="hero__subtitle">
-          Invest in prime residential plots at GreenVista Township -- strategically
+          Invest in prime residential plots at Dwarika City -- strategically
           located near the upcoming international airport, with world-class amenities
           and guaranteed appreciation.
         </p>

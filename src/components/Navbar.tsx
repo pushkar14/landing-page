@@ -25,8 +25,8 @@ const Navbar: React.FC = () => {
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar__container container">
         <a href="#home" className="navbar__logo">
-          <span className="navbar__logo-icon">GV</span>
-          <span className="navbar__logo-text">GreenVista Township</span>
+          <img src="/landing-page/images/DwarikaCityLogo.png" alt="Dwarika City" className="navbar__logo-img" />
+          <span className="navbar__logo-text">Dwarika City</span>
         </a>
         <button
           className={`navbar__toggle ${menuOpen ? 'active' : ''}`}
